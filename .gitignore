@@ -1,0 +1,52 @@
+# Operating-system files
+.DS_Store
+**/.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Local editors and agents
+.idea/
+.vscode/
+.cursor/
+.claude/
+.codex/
+*.code-workspace
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+Vehicle-tracking-main/settings/db_config.yml
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Generated outputs
+Vehicle-tracking-main/application/main/inference/output/*
+!Vehicle-tracking-main/application/main/inference/output/.gitignore
+Vehicle-tracking-main/outputs/
+outputs/
+runs/
+frames/
+
+# Local-only archives and private submission material
+local/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*

@@ -1,6 +1,6 @@
 # Deep Sort with PyTorch
 
-![](demo/demo.gif)
+> This archival copy does not include the upstream demo media.
 
 ## Update(1-1-2020)
 Changes
@@ -116,15 +116,14 @@ The original model used in paper is in original_model.py, and its parameter here
 
 To train the model, first you need download [Market1501](http://www.liangzheng.com.cn/Project/project_reid.html) dataset or [Mars](http://www.liangzheng.com.cn/Project/project_mars.html) dataset.  
 
-Then you can try [train.py](deep_sort/deep/train.py) to train your own parameter and evaluate it using [test.py](deep_sort/deep/test.py) and [evaluate.py](deep_sort/deep/evalute.py).
+Then you can try [train.py](deep_sort/deep/train.py) to train your own parameter and evaluate it using [test.py](deep_sort/deep/test.py) and [evaluate.py](deep_sort/deep/evaluate.py).
 ![train.jpg](deep_sort/deep/train.jpg)
 
 ## Demo videos and images
 [demo.avi](https://drive.google.com/drive/folders/1xhG0kRH1EX5B9_Iz8gQJb7UNnn_riXi6)
 [demo2.avi](https://drive.google.com/drive/folders/1xhG0kRH1EX5B9_Iz8gQJb7UNnn_riXi6)
 
-![1.jpg](demo/1.jpg)
-![2.jpg](demo/2.jpg)
+The upstream demo images are not included in this archival copy.
 
 
 ## References

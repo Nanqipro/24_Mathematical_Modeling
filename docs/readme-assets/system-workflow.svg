@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="180" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">项目工作流</title>
+  <desc id="desc">从视频观测到车辆跟踪、交通指标、拥堵预测和应急车道决策的五阶段流程。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#94A3B8"/>
+    </marker>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#E0F2FE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="#FFFFFF"/>
+  <text x="54" y="54" fill="#0F172A" font-family="Inter,PingFang SC,Microsoft YaHei,sans-serif" font-size="26" font-weight="800">从视频到决策</text>
+  <text x="54" y="82" fill="#64748B" font-family="Inter,PingFang SC,Microsoft YaHei,sans-serif" font-size="14">仓库代码与论文方法的对应关系</text>
+
+  <g font-family="Inter,PingFang SC,Microsoft YaHei,sans-serif">
+    <g transform="translate(48 122)">
+      <rect width="180" height="150" rx="20" fill="url(#panel)" stroke="#BAE6FD"/>
+      <circle cx="90" cy="48" r="25" fill="#0EA5E9"/><path d="M76 43h28v19H76z M84 36h12l4 7H80z" fill="#FFFFFF"/>
+      <text x="90" y="96" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">视频观测</text>
+      <text x="90" y="122" text-anchor="middle" fill="#64748B" font-size="13">4 个监测点</text>
+    </g>
+    <path d="M238 197 H270" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(278 122)">
+      <rect width="180" height="150" rx="20" fill="url(#panel)" stroke="#BAE6FD"/>
+      <circle cx="90" cy="48" r="25" fill="#2563EB"/><rect x="76" y="37" width="28" height="22" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3"/><circle cx="90" cy="48" r="6" fill="#FFFFFF"/>
+      <text x="90" y="96" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">检测与跟踪</text>
+      <text x="90" y="122" text-anchor="middle" fill="#64748B" font-size="13">YOLOv5 + Deep SORT</text>
+    </g>
+    <path d="M468 197 H500" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(508 122)">
+      <rect width="180" height="150" rx="20" fill="url(#panel)" stroke="#BAE6FD"/>
+      <circle cx="90" cy="48" r="25" fill="#06B6D4"/><path d="M76 57V42m10 15V34m10 23V46m10 11V38" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+      <text x="90" y="96" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">交通状态</text>
+      <text x="90" y="122" text-anchor="middle" fill="#64748B" font-size="13">流量 · 密度 · 速度 · TPI</text>
+    </g>
+    <path d="M698 197 H730" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(738 122)">
+      <rect width="180" height="150" rx="20" fill="url(#panel)" stroke="#BAE6FD"/>
+      <circle cx="90" cy="48" r="25" fill="#7C3AED"/><path d="M75 57l10-12 9 7 12-18" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="90" y="96" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">拥堵预测</text>
+      <text x="90" y="122" text-anchor="middle" fill="#64748B" font-size="13">GB · RF · XGBoost</text>
+    </g>
+    <path d="M928 197 H960" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(968 122)">
+      <rect width="184" height="150" rx="20" fill="#FFF7ED" stroke="#FED7AA"/>
+      <circle cx="92" cy="48" r="25" fill="#F59E0B"/><path d="M80 48l8 8 16-19" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="92" y="96" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">启用决策</text>
+      <text x="92" y="122" text-anchor="middle" fill="#64748B" font-size="13">概率模型 + TOPSIS</text>
+    </g>
+  </g>
+</svg>

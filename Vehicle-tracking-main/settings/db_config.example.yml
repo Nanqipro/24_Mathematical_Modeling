@@ -1,0 +1,9 @@
+# Copy this file to db_config.yml for local use only.
+# Prefer TRAFFIC_DATABASE_URL in CI and shared environments.
+dialect: postgresql
+driver: psycopg2
+user: your_username
+password: your_password
+host: localhost
+port: 5432
+database: traffic_tracking

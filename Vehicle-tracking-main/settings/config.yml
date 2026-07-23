@@ -1,4 +1,4 @@
-device: 'GPU'
+device: 'cpu'
 
 #deepsort
 config_deepsort: ../../settings/deep_sort.yaml

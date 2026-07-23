@@ -1,3 +1,7 @@
+import os
+from pathlib import Path
+from urllib.parse import quote_plus
+
 import yaml
 import numpy as np
 from typing import Union
@@ -36,12 +40,29 @@ def extract_xywh_hog(face):
     h = face.bottom() - y
     return (x, y, w, h)
 
-def read_db_config(config_path:str):
+def read_db_config(config_path=None):
+  database_url = os.getenv("TRAFFIC_DATABASE_URL")
+  if database_url:
+    return database_url
+
+  if config_path is None:
+    raise RuntimeError(
+      "Set TRAFFIC_DATABASE_URL or provide a local db_config.yml file."
+    )
+
+  config_path = Path(config_path)
+  if not config_path.exists():
+    raise FileNotFoundError(
+      f"Database configuration not found at {config_path}. "
+      "Copy db_config.example.yml to db_config.yml or set "
+      "TRAFFIC_DATABASE_URL."
+    )
+
   config = read_yml(config_path)
   dialect = config['dialect']
   driver = config['driver']
-  user = config['user']
-  password = config['password']
+  user = quote_plus(str(config['user']))
+  password = quote_plus(str(config['password']))
   host = config['host']
   port = config['port']
   database = config['database']
@@ -85,7 +106,6 @@ def write_csv(csv_path:str, list_ouputs:dict, list_frontal_faces:dict, fps:int) 
           f.write(str(IDs_face)+";")
           f.write(str_array(bb_pp)+";")
           f.write(str_array(bb_face)+"\n")
-
 
 
 

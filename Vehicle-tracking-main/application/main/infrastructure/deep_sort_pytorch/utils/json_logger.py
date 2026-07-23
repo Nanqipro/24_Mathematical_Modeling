@@ -138,7 +138,7 @@ class BboxToJsonLogger(BaseJsonLogger):
             "frame_width": 1920,
             "frame_height": 1080,
             "frame_rate": 20,
-            "video_name": "/home/gpu/codes/MSD/pedestrian_2/project/public/camera1.avi"
+            "video_name": "/path/to/input-video.mp4"
           },
           "frames": [
             {

@@ -33,9 +33,6 @@ from util.OPT_config import OPT
 
 from infrastructure.helper.zone_drawer_helper import ZoneDrawerHelper
 
-from infrastructure.database.Vehicle import Vehicle
-from infrastructure.database.common import add_vehicle_to_db
-
 from threading import Thread
 from datetime import timedelta, datetime
 
@@ -78,14 +75,14 @@ class Tracker:
         cfg = get_config()
         cfg.merge_from_file(opt.config_deepsort)
         attempt_download(deep_sort_weights, repo='mikel-brostrom/Yolov5_DeepSort_Pytorch')
+        device = select_device(opt.device)
         deepsort = DeepSort(cfg.DEEPSORT.REID_CKPT,
                             max_dist=cfg.DEEPSORT.MAX_DIST, min_confidence=cfg.DEEPSORT.MIN_CONFIDENCE,
                             max_iou_distance=cfg.DEEPSORT.MAX_IOU_DISTANCE,
                             max_age=cfg.DEEPSORT.MAX_AGE, n_init=cfg.DEEPSORT.N_INIT, nn_budget=cfg.DEEPSORT.NN_BUDGET,
-                            use_cuda=True)
+                            use_cuda=device.type != 'cpu')
 
         # Initialize
-        device = select_device(opt.device)
         half &= device.type != 'cpu'  # half precision only suvehiclesorted on CUDA
 
         if not evaluate:
@@ -260,7 +257,8 @@ class Tracker:
 
                                     str_ID = str(ID) + "-" +str(time.time()).replace(".", "")
                                     if opt.upload_db:
-                                    
+                                        from infrastructure.database.Vehicle import Vehicle
+                                        from infrastructure.database.common import add_vehicle_to_db
                                         this_vehicle = Vehicle(str_ID, vehicle_infos[ID]['in_time'], vehicle_infos[ID]['exit_time'], 
                                                                 vehicle_infos[ID]['type_vehicle'], vehicle_infos[ID]['lane'])
                                         Thread(target= add_vehicle_to_db, args=[this_vehicle]).start()
@@ -351,4 +349,3 @@ if __name__ == '__main__':
     
     with torch.no_grad():
         tracker.detect()
-
