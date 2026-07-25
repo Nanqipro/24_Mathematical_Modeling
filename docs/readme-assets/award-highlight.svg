@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="245" viewBox="0 0 1400 490" role="img" aria-labelledby="title desc">
+  <title id="title">2024 年华为杯中国研究生数学建模竞赛二等奖</title>
+  <desc id="desc">南昌大学参赛团队凭高速公路拥堵预测与应急车道决策项目获得二等奖。</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFDF7"/>
+      <stop offset="0.58" stop-color="#FFF7E6"/>
+      <stop offset="1" stop-color="#FEECC8"/>
+    </linearGradient>
+    <linearGradient id="medal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE38A"/>
+      <stop offset="0.48" stop-color="#EFB836"/>
+      <stop offset="1" stop-color="#C9860A"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#7C2D12" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="490" rx="32" fill="url(#background)"/>
+  <path d="M0 376 C310 300 476 472 776 394 C1020 331 1182 233 1400 280 L1400 490 L0 490 Z" fill="#991B1B" opacity="0.045"/>
+  <circle cx="1250" cy="80" r="190" fill="#F59E0B" opacity="0.06"/>
+
+  <g transform="translate(82 75)" filter="url(#shadow)">
+    <path d="M62 0 H144 L125 132 L91 106 L59 132 Z" fill="#991B1B"/>
+    <path d="M144 0 H226 L229 132 L196 106 L162 132 Z" fill="#B91C1C"/>
+    <circle cx="144" cy="157" r="104" fill="url(#medal)" stroke="#FFF7D6" stroke-width="10"/>
+    <circle cx="144" cy="157" r="76" fill="none" stroke="#FFF1B8" stroke-width="4" opacity="0.9"/>
+    <path d="M144 92 L164 133 L209 139 L177 171 L184 216 L144 195 L104 216 L111 171 L79 139 L124 133 Z" fill="#FFF7D6"/>
+    <text x="144" y="273" text-anchor="middle" fill="#7F1D1D" font-family="Inter,PingFang SC,Microsoft YaHei,sans-serif" font-size="29" font-weight="800">二等奖</text>
+  </g>
+
+  <g transform="translate(390 68)" font-family="Inter,PingFang SC,Microsoft YaHei,sans-serif">
+    <rect width="226" height="42" rx="21" fill="#991B1B"/>
+    <text x="113" y="28" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="700">2024 · 竞赛成果</text>
+
+    <text x="0" y="105" fill="#7F1D1D" font-size="41" font-weight="800">“华为杯”中国研究生数学建模竞赛</text>
+    <text x="0" y="151" fill="#B45309" font-size="24" font-weight="700">第二十一届 · 二等奖</text>
+
+    <line x1="0" y1="184" x2="884" y2="184" stroke="#E8C982" stroke-width="2"/>
+
+    <text x="0" y="228" fill="#334155" font-size="20" font-weight="700">参赛单位</text>
+    <text x="130" y="228" fill="#0F172A" font-size="20">南昌大学</text>
+
+    <text x="0" y="272" fill="#334155" font-size="20" font-weight="700">获奖项目</text>
+    <text x="130" y="272" fill="#0F172A" font-size="20">基于视频监控与深度学习的高速公路拥堵预测</text>
+    <text x="130" y="306" fill="#0F172A" font-size="20">与应急车道启用决策研究</text>
+
+    <text x="0" y="368" fill="#64748B" font-size="16">获奖信息已根据证书核验 · 个人姓名与证书编号不公开展示</text>
+  </g>
+</svg>
